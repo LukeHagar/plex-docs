@@ -8,7 +8,7 @@ info:
     email: Lukeslakemail@gmail.com
     url: https://www.LukeHagar.com
 servers:
-  - url: "{Protocol}://{Local IP}:{Port}"
+  - url: '{Protocol}://{Local IP}:{Port}'
     variables:
       Protocol:
         enum:
@@ -20,7 +20,7 @@ servers:
         default: 10.10.10.47
         description: The Local IP Address of your plex server
       Port:
-        default: "32400"
+        default: '32400'
         description: The port to access your plex server
   - url: https://plex.tv/api/v2
 security:
@@ -182,7 +182,7 @@ components:
                       librarySectionID:
                         type: string
   responses:
-    "401":
+    '401':
       description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
 paths:
   /:
@@ -193,14 +193,14 @@ paths:
       description: Server Capabilities
       operationId: serverCapabilities
       responses:
-        "200":
+        '200':
           description: The Server Capabilities
           content:
             application/json:
               schema:
                 type: object
                 properties: *ref_0
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
   /activities:
     get:
@@ -210,14 +210,14 @@ paths:
       description: Server Activities
       operationId: serverActivities
       responses:
-        "200":
+        '200':
           description: The Server Activities
           content:
             application/json:
               schema:
                 type: object
                 properties: *ref_1
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
   /activities/{activityUUID}:
     delete:
@@ -235,14 +235,14 @@ paths:
           example: 25b71ed5-0f9d-461c-baa7-d404e9e10d3e
           required: true
       responses:
-        "200":
+        '200':
           description: The Server Activity was canceled
           content:
             application/json:
               schema:
                 type: object
                 properties: *ref_1
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
   /updater/status:
     get:
@@ -252,9 +252,9 @@ paths:
       description: Querying status of updates
       operationId: queryingUpdateStatus
       responses:
-        "200":
+        '200':
           description: The Server Updates
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
   /updater/check:
     put:
@@ -274,9 +274,9 @@ paths:
               - 1
           example: 1
       responses:
-        "200":
-          description: ""
-        "401":
+        '200':
+          description: ''
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
   /updater/apply:
     put:
@@ -306,11 +306,11 @@ paths:
               - 1
           example: 1
       responses:
-        "200":
+        '200':
           description: If the update process started correctly
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
-        "500":
+        '500':
           description: If the update process failed to start
   /butler:
     post:
@@ -325,9 +325,9 @@ paths:
         4. If we are outside the configured window, the task will start immediately.
       operationId: startAllButlerTasks
       responses:
-        "200":
+        '200':
           description: All tasks were started
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
     delete:
       tags:
@@ -337,9 +337,9 @@ paths:
         This endpoint will stop all currently running tasks and remove any scheduled tasks from the queue.
       operationId: stopAllButlerTasks
       responses:
-        "200":
+        '200':
           description: All tasks were stopped
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
   /butler/{taskName}:
     post:
@@ -376,11 +376,11 @@ paths:
               - UpgradeMediaAnalysis
           required: true
       responses:
-        "200":
+        '200':
           description: The task was started successfully
-        "202":
+        '202':
           description: The task was already running.
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
     delete:
       tags:
@@ -412,11 +412,11 @@ paths:
               - UpgradeMediaAnalysis
           required: true
       responses:
-        "200":
+        '200':
           description: The task was stopped
-        "401":
+        '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
-        "404":
+        '404':
           description: The task was not running
 tags:
   - name: Activities
