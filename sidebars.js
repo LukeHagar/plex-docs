@@ -10,7 +10,7 @@ const sidebars = {
         type: "generated-index",
         title: "Plex API",
         description:
-          "This documentation is generated from the plex open api specificiation file",
+          "This documentation is generated from an OpenAPI Specificiation File",
         slug: "/plex",
       },
       items: require("./docs/plex/sidebar.js"),

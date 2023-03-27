@@ -186,7 +186,8 @@ const config = {
         docsPluginId: "classic",
         config: {
           Plex: {
-            specPath: "static/plex-api-spec-dereferenced.yaml", // Path to designated spec file
+            specPath:
+              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml", // Path to designated spec file
             outputDir: "docs/plex", // Output directory for generated .mdx docs
             template: "api.mustache",
             sidebarOptions: {
