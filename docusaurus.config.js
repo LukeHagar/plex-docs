@@ -11,7 +11,7 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://plex-docs.vercel.app",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -39,7 +39,7 @@ const config = {
       ({
         docs: {
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/LukeHagar/plex-api-spec/blob/main/plex-api-spec-dereferenced.yaml",
           sidebarPath: require.resolve("./sidebars.js"),
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
@@ -48,8 +48,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/LukeHagar/plex-docs/tree/main/blog",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -186,10 +185,11 @@ const config = {
         docsPluginId: "classic",
         config: {
           Plex: {
-            specPath:
-              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml", // Path to designated spec file
+            specPath: "static/plex-api-spec-dereferenced.yaml", // Path to designated spec file
             outputDir: "docs/plex", // Output directory for generated .mdx docs
             template: "api.mustache",
+            downloadUrl:
+              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
