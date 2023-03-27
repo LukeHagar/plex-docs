@@ -1,0 +1,38 @@
+---
+id: loga-line
+sidebar_label: Logging a single-line message to the Plex Media Server log.
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["Log"],"description":"This endpoint will write a single-line log message, including a level and source to the main Plex Media Server log.\n","operationId":"logaLine","parameters":[{"name":"level","description":"An integer log level to write to the PMS log with.  \n(0: Error, 1: Warning, 2: Info, 3: Debug, 4: Verbose)\n","in":"query","schema":{"type":"number","enum":[0,1,2,3,4]},"required":true},{"name":"message","description":"The text of the message to write to the log.","in":"query","schema":{"type":"string","example":""},"required":true},{"name":"source","description":"a string indicating the source of the message.","in":"query","schema":{"type":"string","example":""},"required":true}],"responses":{"200":{"description":"Log Line submitted successfully"},"401":{"description":"Unauthorized - Returned if the X-Plex-Token is missing from the header or query."}},"method":"get","path":"/log","servers":[{"url":"{Protocol}://{Local IP}:{Port}","variables":{"Protocol":{"enum":["http","https"],"default":"http","description":"The protocl to use with your plex server"},"Local IP":{"default":"10.10.10.47","description":"The Local IP Address of your plex server"},"Port":{"default":"32400","description":"The port to access your plex server"}}}],"security":[{"PlexToken":[]}],"securitySchemes":{"PlexToken":{"type":"apiKey","in":"header","name":"X-Plex-Token"}},"info":{"title":"Plex-API","summary":"A Plex Media Server API Map","description":"An Open API Spec for interacting with Plex.tv and Plex Servers","version":"0.0.2","contact":{"name":"Luke Hagar","email":"Lukeslakemail@gmail.com","url":"https://www.LukeHagar.com"}},"postman":{"name":"Logging a single-line message to the Plex Media Server log.","description":{"content":"This endpoint will write a single-line log message, including a level and source to the main Plex Media Server log.\n","type":"text/plain"},"url":{"path":["log"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) An integer log level to write to the PMS log with.  \n(0: Error, 1: Warning, 2: Info, 3: Debug, 4: Verbose)\n","type":"text/plain"},"key":"level","value":""},{"disabled":false,"description":{"content":"(Required) The text of the message to write to the log.","type":"text/plain"},"key":"message","value":""},{"disabled":false,"description":{"content":"(Required) a string indicating the source of the message.","type":"text/plain"},"key":"source","value":""}],"variable":[]},"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/plex/plex-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiDemoPanel/MethodEndpoint";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+
+<h1 className={"openapi__heading"}>Logging a single-line message to the Plex Media Server log.</h1>
+
+<MethodEndpoint method={"get"} path={"/log"}></MethodEndpoint>
+
+
+
+This endpoint will write a single-line log message, including a level and source to the main Plex Media Server log.
+
+
+<details style={{"marginBottom":"1rem"}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"level","description":"An integer log level to write to the PMS log with.  \n(0: Error, 1: Warning, 2: Info, 3: Debug, 4: Verbose)\n","in":"query","schema":{"type":"number","enum":[0,1,2,3,4]},"required":true}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"message","description":"The text of the message to write to the log.","in":"query","schema":{"type":"string","example":""},"required":true}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"source","description":"a string indicating the source of the message.","in":"query","schema":{"type":"string","example":""},"required":true}}></ParamsItem></ul></div></details><div><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+Log Line submitted successfully
+
+</div><div></div></TabItem><TabItem label={"401"} value={"401"}><div>
+
+Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
+
+</div><div></div></TabItem></ApiTabs></div></div>
