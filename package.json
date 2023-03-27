@@ -1,6 +1,6 @@
 {
   "name": "plex-docs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -10,11 +10,9 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "gen-docs": "yarn docusaurus gen-api-docs Plex",
-    "clean-docs": "yarn docusaurus clean-api-docs Plex",
-    "rebuild": "yarn clean-docs && yarn gen-docs"
+    "gen-docs": "docusaurus gen-api-docs Plex",
+    "clean-docs": "docusaurus clean-api-docs Plex",
+    "rebuild": "yarn clean-docs & yarn gen-docs"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.0",
