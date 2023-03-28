@@ -7,7 +7,7 @@
 
 +   Response 200 (application/xml)
 
-          <MediaContainer size="1">
+          "<MediaContainer size="1">
               <Device key="6" lastSeenAt="1461737032" make="Silicondust" model="HDHomeRun EXPAND" modelNumber="HDHR3-4DC" protocol="livetv" sources="Cable" state="1" status="1" tuners="4" uri="http://home.techconnect.nl:8822" uuid="141007E7">
                   <ChannelMapping channelKey="5cc83d73af4a72001e9b16d7-5cab3c634df507001fefcad0" deviceIdentifier="46.3" enabled="1" lineupIdentifier="002" />
                   <ChannelMapping channelKey="5cc83d73af4a72001e9b16d7-5cab3d20d30eca001db32922" deviceIdentifier="48.9" enabled="0" lineupIdentifier="004" />
@@ -15,7 +15,7 @@
                   <ChannelMapping channelKey="5cc83d73af4a72001e9b16d7-5cab3c63de29da001cf021c2" deviceIdentifier="49.3" enabled="0" lineupIdentifier="008" />
                   <ChannelMapping channelKey="5cc83d73af4a72001e9b16d7-5cab3c63e3ef4d001d05ba70" deviceIdentifier="10.4" enabled="1" />
               </Device>
-          </MediaContainer>
+          </MediaContainer>"
 
 ### Enable or disable a device [PUT /media/grabbers/devices/{device}{?enabled}]
 
@@ -25,7 +25,7 @@
 
 +   Response 200 (application/xml)
 
-          <MediaContainer message="" size="0" status="0" />
+          "<MediaContainer message="" size="0" status="0" />"
 
 ### Set device preferences [PUT /media/grabbers/devices/{device}/prefs{?name}]
 
@@ -42,10 +42,10 @@
 
 +   Response 200 (application/xml)
 
-          <MediaContainer size="48">
+          "<MediaContainer size="48">
               <DeviceChannel drm="0" hd="0" identifier="46.1" name="KPXO HD" />
               <DeviceChannel drm="0" hd="0" identifier="46.3" name="KHON HD" />
-          </MediaContainer>
+          </MediaContainer>"
 
 ### Set a device's channel mapping [PUT /media/grabbers/devices/{device}/channelmap{?channelMapping,channelsEnabled}]
 
@@ -57,7 +57,7 @@
 
 +   Response 200 (application/xml)
 
-          <MediaContainer message="" size="0" status="0" />
+          "<MediaContainer message="" size="0" status="0" />"
 
 ### Tell a device to scan for channels [POST /media/grabbers/devices/{device}/scan{?source}]
 
@@ -73,7 +73,7 @@
 
     + Body
 
-            <MediaContainer message="" size="0" status="0" />
+            "<MediaContainer message="" size="0" status="0" />"
 
 ### Tell a device to stop scanning for channels [DELETE /media/grabbers/devices/{device}/scan]
 
@@ -82,4 +82,4 @@
 
 +   Response 200 (application/xml)
 
-          <MediaContainer message="" size="0" status="0" />
+          "<MediaContainer message="" size="0" status="0" />"

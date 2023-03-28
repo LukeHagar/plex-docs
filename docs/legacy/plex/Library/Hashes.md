@@ -15,7 +15,7 @@ This resource returns hash values for local files.
 + Response 200 (text/xml;charset=utf-8)
 
     + body
-
+```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <MediaContainer size="1" identifier="com.plexapp.plugins.library" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1519299020">
                 <Photo>
@@ -24,3 +24,4 @@ This resource returns hash values for local files.
                     </Media>
                 </Photo>
             </MediaContainer>
+```

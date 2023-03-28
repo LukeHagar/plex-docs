@@ -22,7 +22,7 @@ This request is intended to be very fast, and called as the user types.
     	+ Default: `3`
 
 + Response 200 (application/xml)
-
+```xml
           <MediaContainer size="12">
             <Hub type="show" hubIdentifier="show" size="1" title="Shows" more="0">
               <Directory title="The Simpsons" titleSort="Simpsons" type="show" ... />
@@ -31,7 +31,7 @@ This request is intended to be very fast, and called as the user types.
               <Video type="movie" title="The Simpsons Movie" ... />
             </Hub>
           </MediaContainer>
-
+```
 ### Perform a search tailored to voice input [GET /hubs/search/voice{?query,type,limit}]
 
 This endpoint performs a search specifically tailored towards voice or other imprecise input which may work badly with the substring and spell-checking heuristics used by the `/hubs/search` endpoint. It uses a [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) heuristic to search titles, and as such is much slower than the other search endpoint. Whenever possible, clients should limit the search to the appropriate type.
@@ -45,7 +45,7 @@ Results, as well as their containing per-type hubs, contain a `distance` attribu
     	+ Default: `3`
 
 + Response 200 (application/xml)
-
+```xml
           <MediaContainer size="2">
             <Hub distance="3" type="movie" hubIdentifier="results.search.1" size="2" title="movie">
               <Video distance="3" type="movie" title="Deadpool" />
@@ -55,3 +55,4 @@ Results, as well as their containing per-type hubs, contain a `distance` attribu
               <Directory distance="4" type="show" title="Deadwood" />
             </Hub>
           </MediaContainer>
+```

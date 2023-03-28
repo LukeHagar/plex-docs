@@ -17,7 +17,7 @@ Description for GET method (action) placeholder.
 + Response 200 (text/xml;charset=utf-8)
 
     + body
-
+```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <MediaContainer allowSync="1" art="/:/resources/movie-fanart.jpg" identifier="com.plexapp.plugins.library" librarySectionID="26" librarySectionTitle="Movies" librarySectionUUID="70cb5089-b165-429b-809a-9e0a31493abf" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1436742334" size="1" thumb="/:/resources/movie.png" title1="Movies" title2="All Movies" viewGroup="movie" viewMode="65592">
                 <Video addedAt="1408525217" art="/library/metadata/1049/art/1434341184" chapterSource="media" contentRating="PG-13" duration="5129000" key="/library/metadata/1049" originallyAvailableAt="2001-09-27" primaryExtraKey="/library/metadata/1073" rating="6.0" ratingKey="1049" studio="Paramount Pictures" summary="FunnyStuff" tagline="3% Body Fat. 1% Brain Activity." thumb="/library/metadata/1049/thumb/1434341184" title="Zoolander" type="movie" updatedAt="1434341184" year="2001">
@@ -35,7 +35,7 @@ Description for GET method (action) placeholder.
                     <Role tag="Christine Taylor" />
                 </Video>
             </MediaContainer>
-
+```
 ### Set the fields of the filtered items [PUT /library/sections/{sectionId}/all{?type,filters,field%2Evalue,field%2Elocked,title%2Evalue,artist%2Etitle%2Evalue,artist%2Etitle%2Eid,album%2Etitle%2Evalue,album%2Etitle%2Eid}]
 
 N.B. `field` in a parameter, represents any valid field for an item.
@@ -117,5 +117,6 @@ Description for response placeholder.
     + body
 
 + Response 400 (text/html)
-
+```html
         <html><head><title>Bad Request</title></head><body><h1>400 Bad Request</h1></body></html>
+```

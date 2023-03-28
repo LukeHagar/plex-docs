@@ -48,13 +48,17 @@ Additional child elements include:
     + Body
 
             Normal response:
+ ```xml
             <MediaContainer size="0"  />
+ ```
 
             Admin terminated session:
+```xml
             <MediaContainer size="0" terminationCode="2006" terminationText="Admin terminated playback with reason: Go Away" />
-            
+```
             Bandwidth changes included:
-            <MediaContainer size="1">
+```xml
+          <MediaContainer size="1">
               <Bandwidths>
                 <Bandwidth time="0" bandwidth="15000" resolution="1080p" />
                 <Bandwidth time="1050008" bandwidth="12000" resolution="1080p" />
@@ -70,6 +74,7 @@ Additional child elements include:
                 <Bandwidth time="1122038" bandwidth="10000" resolution="1080p" />
               </Bandwidths>
             </MediaContainer>
+```
 
 ### Marking items watched [GET /:/scrobble{?key,uri,identifier}]
 

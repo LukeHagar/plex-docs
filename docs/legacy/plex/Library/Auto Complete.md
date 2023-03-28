@@ -22,7 +22,7 @@ Returns a set of items from the filtered items whose {field} starts with {field}
 Example returning items
 
     + Body
-
+```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <MediaContainer allowSync="0" art="/:/resources/movie-fanart.jpg" content="secondary" identifier="com.plexapp.plugins.library" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1436742334" size="2" thumb="/:/resources/movie.png" title1="Movies" viewGroup="secondary" viewMode="65592">
                 <Video addedAt="1408492156" art="/library/metadata/1024/art/1434341159" chapterSource="media" contentRating="R" duration="6627200" key="/library/metadata/1024" originallyAvailableAt="2002-12-06" primaryExtraKey="/library/metadata/1051" rating="7.1" ratingKey="1024" studio="Columbia Pictures" summary="A love-lorn script writer grows increasingly desperate in his quest to adapt the book 'The Orchid Thief'." tagline="Charlie Kaufman writes the way he lives... With Great Difficulty. His Twin Brother Donald Lives the way he writes... with foolish abandon. Susan writes about life... But can't live it. John's life is a book... Waiting to be adapted. One story... Four Lives... A million ways it can end." thumb="/library/metadata/1024/thumb/1434341159" title="Adaptation." title.queryRange="0,0" type="movie" updatedAt="1434341159" year="2002">
@@ -52,7 +52,7 @@ Example returning items
                     <Role tag="Krist?na Kohoutov?" />
                 </Video>
             </MediaContainer>
-
+```
 + Request With genre.query=a (text/xml)
 
 + Response 200 (text/xml;charset=utf-8)
@@ -63,10 +63,11 @@ Example returning tags
             Accept: text/xml
 
     + Body
-
+```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <MediaContainer allowSync="0" art="/:/resources/movie-fanart.jpg" content="secondary" identifier="com.plexapp.plugins.library" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1436742334" size="3" thumb="/:/resources/movie.png" title1="Movies" viewGroup="secondary" viewMode="65592">
                 <Directory id="190" tag="Action" tagType="1" />
                 <Directory id="98" tag="Adventure" tagType="1" />
                 <Directory id="135" tag="Animation" tagType="1" />
             </MediaContainer>
+```

@@ -47,7 +47,7 @@ The response consists of a list of devices, with the following attributes:
   - `enumValues`: A pipe-separated list of options for the preference. Each option is a colon-separated entry with the form of `value:display-string`.
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer size="1">
              <Device key="123123" make="Silicondust" model="HDHomeRun CONNECT" modelNumber="HDHR4-2DT"
                      protocol="livetv" status="alive" title="HDHomeRun CONNECT" tuners="1"
@@ -58,7 +58,7 @@ The response consists of a list of devices, with the following attributes:
                             default="0" value="0" enumValues="0:720|1:1080" />
              </Device>
         </MediaContainer>
-
+```
 ### Device Probe [POST /devices/probe{?uri}]
 
 Probes a specific URI for a network device, and returns a device, if it exists at the given URI.
@@ -67,11 +67,11 @@ Probes a specific URI for a network device, and returns a device, if it exists a
     + uri: http://10.0.0.100:10000 (string) - URI for the device. Can be either HTTP or HTTPS.
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer size="1">
             <Device ... />
         </MediaContainer>
-
+```
 ### Get identity and capabilities [GET /devices/{devicekey}]
 
 Returns the identity, capabilities, and current status of the devices and each of its tuners.
@@ -98,7 +98,7 @@ Returns the identity, capabilities, and current status of the devices and each o
     + devicekey: 12323213 (string, required) - key referring to tuner device, as originally reported in the `/devices/discover` endpoint.
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer size="1">
             <Device key="dvb%23hdhr%230%23305174604" make="Silicondust" model="hdhomerun4_dvbt"
                     modelNumber="HDHR4-2DT" protocol="livetv" status="alive"
@@ -109,7 +109,7 @@ Returns the identity, capabilities, and current status of the devices and each o
                 <Tuner index="2" status="scanning" progress="50" channelsFound="10"/>
             </Device>
         </MediaContainer>
-
+```
 ### Get a device's channels [GET /devices/{devicekey}/channels]
 
 Returns the current channels. This list is updated after a complete channel scan, and should not be assumed to persist beyond that.
@@ -132,12 +132,12 @@ The response contains zero or more channels, with the following attributes:
     + devicekey: 12323213 (string, required) - key referring to tuner device, as originally reported in the `/devices/discover` endpoint.
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer size="1">
             <Channel drm="0" channelIdentifier="triplet://10:1123:201" name="NOS 1 HD" origin="Canal Digitaal"
                      param="xxxxxxx" number="10" type="tv|radio" />
         </MediaContainer>
-
+```
 ### Get channel scan providers [GET /devices/{devicekey}/scanners{?type}]
 
 Before scanning a device for channels, it must be queried to ascertain which type of scanners are supported. Each scanner may have custom configuration which is passed back in the form of preferences. These preferences must be shown the user, and the values round-tripped back when the scan is kicked off. The response includes one or more scanners, defined below.
@@ -149,7 +149,7 @@ If the response's media container has `simultaneousScanners="1"`, this implies t
     + type: 5 (string, optional) - The filter on broadcast standard type, which can be: `0` (atsc), `1` (cqam), `2` (dvb-s), `3` (iptv), `4` (virtual), `5` (dvb-t), `6` (dvb-c), `7` (isdbt)
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer size="3" simultaneousScanners="1">
             <Scanner type="dvb-t">
                 <Setting id="provider" enumValues="1:DVB-T Netherlands|2:Digitenne (DVB-T, Netherlands)..." />
@@ -163,7 +163,7 @@ If the response's media container has `simultaneousScanners="1"`, this implies t
                 <Setting id="lnbType" enumValues="ku_linear:Ku-linear|ku_circular:Ku-circular..." />
             </Scanner>
         </MediaContainer>
-
+```
 #### Scanners
 
 Defines a scanner that can be used to search for channels. They will have the following attributes:
@@ -185,12 +185,12 @@ In some cases, channel scanning is a two-step process, where the first stage con
     + devicekey: 12323213 (string, required) - key referring to tuner device, as originally reported in the `/devices/discover` endpoint.
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer size="2">
             <Network key="43136" title="Noord Holland" />
             <Network key="43138" title="Flevoland" />
         </MediaContainer>
-
+```
 ### Start a channel scan for network [POST /devices/{devicekey}/scan{?network,source,provider}]
 
 Starts a background channel scan. Updates are received via querying the device details endpoint (`/devices/x`). The response will have the following attributes:
@@ -204,9 +204,9 @@ Starts a background channel scan. Updates are received via querying the device d
     + provider: 1 (integer) - the key of the scanner to use when scanning.
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer status="0" message="...">
-
+```
 ### Cancel channel scan [DELETE /devices/{devicekey}/scan]
 
 Cancels an ongoing background channel scan.
@@ -215,9 +215,9 @@ Cancels an ongoing background channel scan.
     + devicekey: 12323213 (string, required) - key referring to tuner device, as originally reported in the `/devices/discover` endpoint.
 
 +   Response 200 (application/xml)
-
+```xml
         <MediaContainer status="0" message="..." />
-
+```
 ### Stream media from a tuner [GET /devices/{devicekey}/media/{channel}{?param}]
 
 + Parameters
@@ -244,7 +244,7 @@ These preferences are originally provided by the device in the `/devices/discove
 Network tuners can present themselves on the network using the Simple Service Discovery Protocol and Plex Media Server will discover them. The following XML is an example of the data returned from SSDP. The `deviceType`, `serviceType`, and `serviceId` values must remain as they are in the example in order for PMS to properly discover the device. Other less-obvious fields are described in the parameters section below.
 
 + Example SSDP output
-
+```xml
         <root xmlns="urn:schemas-upnp-org:device-1-0">
             <specVersion>
                 <major>1</major>
@@ -269,7 +269,7 @@ Network tuners can present themselves on the network using the Simple Service Di
                 </serviceList>
             </device>
         </root>
-
+```
 + Parameters
     + UDN: (string) A UUID for the device. This should be unique across models of a device at minimum.
     + URLBase: (string) The base HTTP URL for the device from which all of the other endpoints are hosted.

@@ -8,11 +8,11 @@ Updates to the status can be observed via the Event API.
 + Response 200 (application/xml;charset=utf-8)
 
     + Body
-
+```xml
             <MediaContainer size="1" canInstall="0" autoUpdateVersion="1" checkedAt="1486011538" downloadURL="https://plex.tv/downloads/..." status="0">
               <Release key="https://plex.tv/updater/releases/121" version="1.3.4.3285-b46e0ea" added="(Web) Updated Plex Web to 2.12.9.&#xD;&#xA;(Media Flags) Updated bundle to 2016-12-22 (#6033)" fixed="(DLNA) Crash browsing to certain photo library sections. (#5874)&#xD;&#xA;(Streaming Brain) Certain videos might transcode instead even when enough bandwidth was available to direct play. (#6085) (#6216)" downloadURL="https://plex.tv/downloads/latest/..." state="notify" />
             </MediaContainer>
-
+```
 ### Checking for updates [PUT /updater/check]
 
 + Parameters

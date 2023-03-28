@@ -14,14 +14,14 @@ Activities are optional cancellable. If cancellable, they may be cancelled via t
 ### Get all activities [GET /activities]
 
 + Response 200 (application/xml)
-
-        <MediaContainer size="1">
+```xml
+<MediaContainer size="1">
             <Activity uuid="d6199ba1-fb5e-4cae-bf17-1a5369c1cf1e" cancellable="0" progress="7" subtitle="Downloaded 173 airings" title="Refreshing EPG" type="provider.epg.load" userID="1">
             	<Context name="value" />
             	<Response name="value" />
             </Activity>
         </MediaContainer>
-
+```
 ### Cancel a running activity [DELETE /activities/{activity}]
 
 + Parameters

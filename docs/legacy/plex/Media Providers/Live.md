@@ -20,7 +20,7 @@ Note that when successfully started, the reply will also include an Activity hea
 
 + Response 200 (application/xml)
 
-        <MediaContainer size="1">
+        "<MediaContainer size="1">
             <MediaSubscription key="886" title="This Episode" type="4">
                 <MediaGrabOperation deviceID="334" grabberIdentifier="tv.plex.grabbers.hdhomerun" grabberProtocol="livetv" key="/media/grabbers/operations/005-555wew" mediaIndex="0" mediaSubscriptionID="886" rolling="1" status="inprogress">
                     <Video genuineMediaAnalysis="1" grandparentTitle="Live TV" key="/livetv/sessions/c1e26483-946b-4f8a-8120-bd498bd31386" live="1" title="Live Session 555wew">
@@ -55,7 +55,7 @@ Note that when successfully started, the reply will also include an Activity hea
                     </Video>
                 </AlsoAiring>
             </MediaSubscription>
-        </MediaContainer>
+        </MediaContainer>"
 
 ### Cancel an existing grab [DELETE /media/grabbers/operations/{uuid}]
 
@@ -72,7 +72,7 @@ This endpoint cancels an existing media grab (recording). It can be used to reso
 
 + Response 200 (application/xml)
 
-        <?xml version="1.0" encoding="UTF-8"?>
+        "<?xml version="1.0" encoding="UTF-8"?>
         <MediaContainer size="1">
             <Video genuineMediaAnalysis="1" live="1">
                 <Media uuid="dc30f95e-6379-44f7-8168-172ffc820496">
@@ -82,7 +82,7 @@ This endpoint cancels an existing media grab (recording). It can be used to reso
                     </Part>
                 </Media>
             </Video>
-        </MediaContainer>
+        </MediaContainer>"
 
 ### Get particular session [GET /livetv/sessions/{session}]
 

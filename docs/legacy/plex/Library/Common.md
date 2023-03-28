@@ -15,19 +15,19 @@ attributes of the items selected by the provided filter
 + Response 200 (text/xml;charset=utf-8)
 
     + Body
-
+```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <MediaContainer allowSync="0" art="/:/resources/movie-fanart.jpg" content="secondary" identifier="com.plexapp.plugins.library" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1436742334" size="1" thumb="/:/resources/movie.png" title1="Movies" title2="Common" viewGroup="secondary" viewMode="65592">
                 <Common guid="" index="1" mixedFields="title,ratingKey,titleSort,tagline,rating,summary,year,studio,originallyAvailableAt,originalTitle,contentRating" ratingCount="0" titleSort="" type="common">
                 </Common>
             </MediaContainer>
-
+```
 + Request All filtered items are common (text/xml)
 
 + Response 200 (text/xml;charset=utf-8)
 
     + Body
-
+```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <MediaContainer allowSync="0" art="/:/resources/movie-fanart.jpg" content="secondary" identifier="com.plexapp.plugins.library" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1436742334" size="1" thumb="/:/resources/movie.png" title1="M
             ovies" title2="Common" viewGroup="secondary" viewMode="65592">
@@ -46,17 +46,18 @@ attributes of the items selected by the provided filter
                     <Role id="134" role="Alice" tag="Krist?na Kohoutov?" />
                 </Common>
             </MediaContainer>
-
+```
 + Response 400 (text/html)
 In response to missing the type parameter.
 
     + Body
-
+```html
             <html><head><title>Bad Request</title></head><body><h1>400 Bad Request</h1></body></html>
-
+```
 + Response 404 (text/html)
 In response to a non-existant sectionId.
 
     + Body
-
+```html
             <html><head><title>Not Found</title></head><body><h1>404 Not Found</h1></body></html>
+```

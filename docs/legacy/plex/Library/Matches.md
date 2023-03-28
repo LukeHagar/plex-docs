@@ -89,7 +89,7 @@ The following hints are required:
 
 + Response 200 (application/xml)
 
-  ```
+  ```xml
     <MediaContainer size="1">
         <Video score="100" ratingKey="667573" key="/library/metadata/667573" studio="Shamley Productions" type="movie" title="Psycho" />
     </MediaContainer>

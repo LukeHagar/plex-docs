@@ -41,11 +41,11 @@ The media container itself has a few special attributes:
     Otherwise begins the play queue on the beginning of the show or season.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="21" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueSourceURI="library://2d8ea42e-7845-498b-b349-095ecaa3c451/item/%2Flibrary%2Fmetadata%2F1906642" playQueueTotalCount="22" playQueueVersion="1">
             <Track playQueueItemID="2211762" />
           </MediaContainer>
-
+```
 ### Retrieve a play queue  [GET /playQueues/{playQueue}{?own,center,window,includeBefore,includeAfter}]
 
 Retrieves the play queue, centered at current item. This can be treated as a regular container by play queue-oblivious clients, but they may wish to request a large window onto the queue since they won't know to refresh.
@@ -59,12 +59,12 @@ Retrieves the play queue, centered at current item. This can be treated as a reg
     + includeAfter: 1 (boolean, optional) - whether to include the items after the center (if 0, center is not included either), defaults to 1.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="21" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueSourceURI="library://2d8ea42e-7845-498b-b349-095ecaa3c451/item/%2Flibrary%2Fmetadata%2F1906642" playQueueTotalCount="22" playQueueVersion="1">
             <Track playQueueItemID="2211762" />
             ...
           </MediaContainer>
-
+```
 ### Add a generator or playlist to a play queue [PUT /playQueues/{playQueue}{?uri,playlistID,next}]
 
 Adds an item to a play queue (e.g. party mode). Increments the version of the play queue. Takes the following parameters (`uri` and `playlistID` are mutually exclusive). Returns the modified play queue.
@@ -76,12 +76,12 @@ Adds an item to a play queue (e.g. party mode). Increments the version of the pl
     + next: 0 (boolean, optional) - play this item next (defaults to 0 - queueing at the end of manually queued items).
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="21" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueSourceURI="library://2d8ea42e-7845-498b-b349-095ecaa3c451/item/%2Flibrary%2Fmetadata%2F1906642" playQueueTotalCount="22" playQueueVersion="1">
             <Track playQueueItemID="2211762" />
             ...
           </MediaContainer>
-
+```
 ### Delete an item from a play queue [DELETE /playQueues/{playQueue}/items/{playQueueItemID}]
 
 Deletes an item in a play queue. Increments the version of the play queue. Returns the modified play queue.
@@ -91,12 +91,12 @@ Deletes an item in a play queue. Increments the version of the play queue. Retur
     + playQueueItemID: 123123 (string) - The play queue item ID to delete.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="21" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueSourceURI="library://2d8ea42e-7845-498b-b349-095ecaa3c451/item/%2Flibrary%2Fmetadata%2F1906642" playQueueTotalCount="22" playQueueVersion="1">
             <Track playQueueItemID="2211762" />
             ...
           </MediaContainer>
-
+```
 ### Clear a play queue [DELETE /playQueues/{playQueue}/items]
 
 Deletes all items in the play queue, and increases the version of the play queue.
@@ -105,10 +105,10 @@ Deletes all items in the play queue, and increases the version of the play queue
     + playQueue: 101 (string) - The ID of the play queue.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="0" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueTotalCount="0" playQueueVersion="1">
           </MediaContainer>
-
+```
 ### Move an item in a play queue [PUT /playQueues/{playQueue}/items/{playQueueItemID}/move{?after}]
 
 Moves an item in a play queue, and increases the version of the play queue. Returns the modified play queue.
@@ -119,12 +119,12 @@ Moves an item in a play queue, and increases the version of the play queue. Retu
     + after: 123 (string, optional) - the play queue item ID to insert the new item after. If not present, moves to the beginning.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="21" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueSourceURI="library://2d8ea42e-7845-498b-b349-095ecaa3c451/item/%2Flibrary%2Fmetadata%2F1906642" playQueueTotalCount="22" playQueueVersion="1">
             <Track playQueueItemID="2211762" />
             ...
           </MediaContainer>
-
+```
 ### Shuffle a play queue [PUT /playQueues/{playQueue}/shuffle]
 
 Shuffle a play queue (or reshuffles if already shuffled). The currently selected item is maintained. Note that this is currently only supported for play queues *without* an Up Next area. Returns the modified play queue.
@@ -133,12 +133,12 @@ Shuffle a play queue (or reshuffles if already shuffled). The currently selected
     + playQueue: 101 (string) - The ID of the play queue.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="21" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueSourceURI="library://2d8ea42e-7845-498b-b349-095ecaa3c451/item/%2Flibrary%2Fmetadata%2F1906642" playQueueTotalCount="22" playQueueVersion="1">
             <Track playQueueItemID="2211762" />
             ...
           </MediaContainer>
-
+```
 ### Unshuffle a play queue [PUT /playQueues/{playQueue}/unshuffle]
 
 Unshuffles a play queue and restores "natural order". Note that this is currently only supported for play queues *without* an Up Next area. Returns the modified play queue.
@@ -147,8 +147,9 @@ Unshuffles a play queue and restores "natural order". Note that this is currentl
     + playQueue: 101 (string) - The ID of the play queue.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="21" playQueueID="9631" playQueueSelectedItemID="2211762" playQueueSelectedItemOffset="0" playQueueSelectedMetadataItemID="1941458" playQueueShuffled="0" playQueueSourceURI="library://2d8ea42e-7845-498b-b349-095ecaa3c451/item/%2Flibrary%2Fmetadata%2F1906642" playQueueTotalCount="22" playQueueVersion="1">
             <Track playQueueItemID="2211762" />
             ...
           </MediaContainer>
+```

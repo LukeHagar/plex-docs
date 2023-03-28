@@ -13,7 +13,8 @@ Note that any of the parameters passed to the metadata details endpoint (e.g. `i
     + ingestNonMatches: `1` (boolean, optional) - Whether or not non matching media should be stored. Defaults to 0.
 
 + Response 200 (application/xml)
-
+```xml
          <MediaContainer size="1">
            <Video ...>
          </MediaContainer>
+```

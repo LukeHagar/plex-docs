@@ -32,7 +32,7 @@ Returns details for the library. This can be thought of as an interstitial endpo
       + Default: `0`
 
 + Response 200 (application/xml)
-
+```xml
         <MediaContainer size="20" allowSync="0" art="/:/resources/movie-fanart.jpg" content="secondary" identifier="com.plexapp.plugins.library" librarySectionID="1" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1484125920" sortAsc="1" thumb="/:/resources/movie.png" title1="Movies" viewGroup="secondary" viewMode="65592">
           <Directory key="all" title="All Movies"/>
           <Directory key="unwatched" title="Unwatched"/>
@@ -75,3 +75,4 @@ Returns details for the library. This can be thought of as an interstitial endpo
             <Sort defaultDirection="desc" descKey="duration:desc" key="duration" title="Duration"/>
           </Type>
         </MediaContainer>
+```

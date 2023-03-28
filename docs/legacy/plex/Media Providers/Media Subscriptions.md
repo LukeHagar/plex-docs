@@ -6,7 +6,7 @@
     + type: `2` - The type of the thing we're subscribing too (e.g. show, season).
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="7">
               <Setting id="newnessPolicy" label="" default="0" summary="" type="int" value="-1" hidden="0" advanced="0" group=""/>
               <Setting id="replacementPolicy" label="" default="0" summary="" type="int" value="-1" hidden="0" advanced="0" group=""/>
@@ -16,6 +16,7 @@
               <Setting id="endOffsetSeconds" label="" default="0" summary="" type="int" value="-1" hidden="0" advanced="0" group=""/>
               <Setting id="recordPartials" label="" default="true" summary="" type="bool" value="false" hidden="0" advanced="0" group=""/>
           </MediaContainer>
+```
 
 ### Create a subscription [POST /media/subscriptions/{?targetLibrarySectionID,targetSectionLocationID,type,hints,prefs}]
 
@@ -30,7 +31,7 @@
        + `params[source]=server://0123456789abcdef0123456789abcdef01234567/com.plexapp.plugins.library`: Required for downloads to indicate the source of the downloaded content.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="1">
               <MediaSubscription key="18" metadataType="2" targetLibrarySectionID="2" title="Family Guy">
                   <MediaGrabOperation beginsAt="1465814100" endsAt="1465815900" grandparentTitle="Family Guy" index="1" mediaSubscriptionID="19" parentIndex="1" status="1" title="Death Has a Shadow">
@@ -50,20 +51,20 @@
                   <Setting advanced="0" default="true" group="" hidden="0" id="recordPartials" label="Record partial media" summary="" type="bool" value="true" />
               </MediaSubscription>
           </MediaContainer>
-
+```
 ### Get all subscriptions [GET /media/subscriptions/{?includeGrabs}]
 
 +   Parameters
     + includeGrabs: `1` (optional) - Whether or not to include all the scheduled grabs for each subcription.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="1">
               <MediaSubscription key="1" metadataType="2" targetLibrarySectionID="2" title="fresh off the boat">
                   <Setting advanced="0" default="0" enumValues="0:all episodes|1:only new episodes" group="" hidden="0" id="newnessPolicy" label="Record" summary="" type="int" value="0" />
               </MediaSubscription>
           </MediaContainer>
-
+```
 ### Get a single subscription [GET /media/subscriptions/{subscription}{?includeGrabs}]
 
 +   Parameters
@@ -71,13 +72,13 @@
     + includeGrabs: `1` (optional) - Whether or not to include all the scheduled grabs for each subcription.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="1">
               <MediaSubscription key="1" metadataType="2" targetLibrarySectionID="2" title="fresh off the boat">
                   <Setting advanced="0" default="0" enumValues="0:all episodes|1:only new episodes" group="" hidden="0" id="newnessPolicy" label="Record" summary="" type="int" value="0" />
               </MediaSubscription>
           </MediaContainer>
-
+```
 ### Delete a subscription [DELETE /media/subscriptions/{subscription}]
 
 + Parameters
@@ -91,17 +92,17 @@
     + prefs: `prefs[minVideoQuality]=720` (array) - Subscription preferences.
 
 +   Response 200 (application/xml)
-
+```xml
           <MediaContainer size="1">
               <MediaSubscription key="1" metadataType="2" targetLibrarySectionID="2" title="fresh off the boat">
                   <Setting advanced="0" default="0" enumValues="0:all episodes|1:only new episodes" group="" hidden="0" id="newnessPolicy" label="Record" summary="" type="int" value="0" />
               </MediaSubscription>
           </MediaContainer>
-
+```
 ### Get all scheduled recordings [GET /media/subscriptions/scheduled]
 
 + Response 200 (application/xml)
-
+```xml
         <MediaContainer size="1">
             <MediaGrabOperation beginsAt="1466060400" endsAt="1466062200" grandparentTitle="Fresh Off the Boat" index="5" mediaSubscriptionID="1" parentIndex="2" status="1" title="Miracle on Dead Street">
                 <Video addedAt="1464994564" contentRating="TV-PG" duration="1800000" grandparentTitle="Fresh Off the Boat" index="5" key="/tv.plex.providers.epg.onconnect-811e2e8a-f98f-4d1f-a26a-8bc26e4999a7/metadata/2543" originallyAvailableAt="2015-10-27" parentIndex="2" parentKey="/tv.plex.providers.epg.onconnect-811e2e8a-f98f-4d1f-a26a-8bc26e4999a7/metadata/2542" parentRatingKey="2542" ratingKey="com.gracenote.onconnect://episode/EP019218760019" summary="Louis wants to make his street a prime trick-or-treat destination." title="Miracle on Dead Street" type="episode" year="2015">
@@ -112,7 +113,7 @@
                 </Video>
             </MediaGrabOperation>
         </MediaContainer>
-
+```
 ### Process all subscriptions [POST /media/subscriptions/process]
 
 +   Response 200
