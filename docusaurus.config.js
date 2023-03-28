@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Plex Docs",
-  tagline: "Plex api documentation with a kick",
+  tagline: "Community Sourced Plex API Documentation with a kick",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -60,6 +60,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
@@ -173,7 +178,7 @@ const config = {
       announcementBar: {
         id: "announcementBar_1",
         content:
-          "If you have any feedback on the <a href='https://github.com/LukeHagar/plex-api-spec'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
+          "This is not an Official Plex.TV Resource. If you have any feedback on the <a href='https://github.com/LukeHagar/plex-api-spec'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
       },
     }),
 
