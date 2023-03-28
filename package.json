@@ -5,14 +5,13 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "yarn rebuild & docusaurus build",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "gen-docs": "docusaurus gen-api-docs Plex",
-    "clean-docs": "docusaurus clean-api-docs Plex",
-    "rebuild": "yarn clean-docs & yarn gen-docs"
+    "clean-docs": "docusaurus clean-api-docs Plex"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.0",
