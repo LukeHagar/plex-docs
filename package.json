@@ -11,7 +11,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "gen-docs": "docusaurus gen-api-docs Plex",
-    "clean-docs": "docusaurus clean-api-docs Plex"
+    "clean-docs": "docusaurus clean-api-docs Plex",
+    "rebuild": "yarn clean-docs && yarn gen-docs"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.0",
