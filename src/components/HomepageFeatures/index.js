@@ -1,43 +1,73 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Updated with the Spec",
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        API Documentation dynamically generated from an{" "}
+        <a
+          href="https://github.com/LukeHagar/plex-api-spec"
+          target="_blank"
+          rel="noreferrer"
+        >
+          OpenAPI Specification
+        </a>
+        .
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Open Source",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The OpenAPI Specification is fully open source, and everyone is welcome{" "}
+        <a
+          href="https://github.com/LukeHagar/plex-api-spec/issues"
+          target="_blank"
+          rel="noreferrer"
+        >
+          report issues
+        </a>{" "}
+        or{" "}
+        <a
+          href="https://github.com/LukeHagar/plex-api-spec/pulls"
+          target="_blank"
+          rel="noreferrer"
+        >
+          submit pull requests
+        </a>
+        .
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Potential for SDKs",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The Open API Specification can be used to generate SDKs in a number of
+        different languages (JS/TS, GO, Python, Powershell) using existing{" "}
+        <a
+          href="https://openapi-generator.tech"
+          target="_blank"
+          rel="noreferrer"
+        >
+          time tested tools
+        </a>
+        .
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
