@@ -3967,7 +3967,7 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-openapi-docs@^2.0.0, docusaurus-plugin-openapi-docs@^2.0.0-beta.2:
+docusaurus-plugin-openapi-docs@2.0.0-beta.2, docusaurus-plugin-openapi-docs@^2.0.0-beta.2:
   version "2.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/docusaurus-plugin-openapi-docs/-/docusaurus-plugin-openapi-docs-2.0.0-beta.2.tgz#728c3765833d868d79ede01c81d8d2dd53a7e351"
   integrity sha512-QQwoz3CLMb9dl2M9PKU4tPNeqkqTUjukh8L4d1ggmGTojmt0i2QxDixqGcdEV0zA/bzrRdgm6gykOHvyMdiP0A==
@@ -4002,7 +4002,7 @@ docusaurus-plugin-sass@^0.2.3:
   dependencies:
     sass-loader "^10.1.1"
 
-docusaurus-theme-openapi-docs@^2.0.0:
+docusaurus-theme-openapi-docs@2.0.0-beta.2:
   version "2.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/docusaurus-theme-openapi-docs/-/docusaurus-theme-openapi-docs-2.0.0-beta.2.tgz#bda0b802c1d4cbe289b8caa06920419561129701"
   integrity sha512-TYoKrPbn3nAA48WxGgAsofTuH6vr0gU4flW7F8bprlAki8Ggq+cm1cabmeqw48OCmriNWH82f85xW4OiLc57Lw==
