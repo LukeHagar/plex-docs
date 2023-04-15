@@ -54,7 +54,7 @@ const config = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-MSKDJLGPWF',
+          trackingID: "G-MSKDJLGPWF",
           anonymizeIP: true,
         },
       }),
@@ -183,6 +183,18 @@ const config = {
         id: "announcementBar_1",
         content:
           "This is not an Official Plex.TV Resource. If you have any feedback on the <a href='https://github.com/LukeHagar/plex-api-spec'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "B040KPNF7Z",
+
+        // Public API key: it is safe to commit it
+        apiKey: "6dd932b0ad77bf1b92efa0ff25023ffe",
+
+        indexName: "plex-vercel",
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: "search",
       },
     }),
 
