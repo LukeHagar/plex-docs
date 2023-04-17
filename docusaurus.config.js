@@ -70,7 +70,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/Open-Graph-Image.jpg",
       navbar: {
         title: "Plex Docs",
         logo: {
@@ -184,6 +184,13 @@ const config = {
         content:
           "This is not an Official Plex.TV Resource. If you have any feedback on the <a href='https://github.com/LukeHagar/plex-api-spec'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
       },
+      metadata: [
+        {
+          name: "keywords",
+          content:
+            "plex, api, sdk, ts, typescript, plex media server, plexapi.dev",
+        },
+      ],
       algolia: {
         // The application ID provided by Algolia
         appId: "B040KPNF7Z",
