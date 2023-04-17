@@ -70,7 +70,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: "img/Open-Graph-Image.jpg",
+      image: "img/Open-Graph-Image.png",
       navbar: {
         title: "Plex Docs",
         logo: {
