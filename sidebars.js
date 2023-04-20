@@ -11,7 +11,7 @@ const sidebars = {
         title: "Plex Media Server API",
         description:
           "This documentation is generated from an OpenAPI Specificiation File",
-        slug: "/plex-media-server",
+        slug: "/plex",
       },
       items: require("./docs/plex/sidebar.js"),
     },
@@ -25,7 +25,7 @@ const sidebars = {
         title: "Plex API",
         description:
           "This documentation is generated from an OpenAPI Specificiation File",
-        slug: "/plex-media-server",
+        slug: "/plex-tv",
       },
       items: require("./docs/plex-tv/sidebar.js"),
     },
