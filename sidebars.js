@@ -3,17 +3,31 @@ const sidebars = {
   plexSidebar: [
     {
       type: "category",
-      label: "Plex API",
+      label: "Plex Media Server API",
       collapsible: false,
       collapsed: false,
       link: {
         type: "generated-index",
-        title: "Plex API",
+        title: "Plex Media Server API",
         description:
           "This documentation is generated from an OpenAPI Specificiation File",
         slug: "/plex",
       },
       items: require("./docs/plex/sidebar.js"),
+    },
+    {
+      type: "category",
+      label: "Plex TV API",
+      collapsible: false,
+      collapsed: false,
+      link: {
+        type: "generated-index",
+        title: "Plex TV API",
+        description:
+          "This documentation is generated from an OpenAPI Specificiation File",
+        slug: "/plex-tv",
+      },
+      items: require("./docs/plex-tv/sidebar.js"),
     },
     {
       type: "category",

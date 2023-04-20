@@ -21,3 +21,5 @@ yarn-error.log*
 
 
 docs/plex
+docs/plex-media-server
+docs/plex-tv
