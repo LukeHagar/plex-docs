@@ -226,7 +226,7 @@ const config = {
           },
           PMS: {
             specPath: "static/plex-media-server-spec-dereferenced.yaml", // Path to designated spec file
-            outputDir: "docs/plex-media-server", // Output directory for generated .mdx docs
+            outputDir: "docs/plex", // Output directory for generated .mdx docs
             template: "api.mustache",
             downloadUrl:
               "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml",
