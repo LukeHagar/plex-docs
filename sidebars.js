@@ -22,7 +22,7 @@ const sidebars = {
       collapsed: false,
       link: {
         type: "generated-index",
-        title: "Plex API",
+        title: "Plex TV API",
         description:
           "This documentation is generated from an OpenAPI Specificiation File",
         slug: "/plex-tv",
