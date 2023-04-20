@@ -13,7 +13,7 @@ const sidebars = {
           "This documentation is generated from an OpenAPI Specificiation File",
         slug: "/plex-media-server",
       },
-      items: require("./docs/plex-media-server/sidebar.js"),
+      items: require("./docs/plex/sidebar.js"),
     },
     {
       type: "category",
