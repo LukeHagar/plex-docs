@@ -212,9 +212,21 @@ const config = {
         id: "openapi",
         docsPluginId: "classic",
         config: {
-          Plex: {
-            specPath: "static/plex-api-spec-dereferenced.yaml", // Path to designated spec file
-            outputDir: "docs/plex", // Output directory for generated .mdx docs
+          PlexTV: {
+            specPath: "static/plex-tv-spec-dereferenced.yaml", // Path to designated spec file
+            outputDir: "docs/plex-tv", // Output directory for generated .mdx docs
+            template: "api.mustache",
+            downloadUrl:
+              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+              sidebarCollapsed: false,
+            },
+          },
+          PMS: {
+            specPath: "static/plex-media-server-spec-dereferenced.yaml", // Path to designated spec file
+            outputDir: "docs/plex-media-server", // Output directory for generated .mdx docs
             template: "api.mustache",
             downloadUrl:
               "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml",

@@ -11,8 +11,8 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
-    "gen-docs": "docusaurus gen-api-docs Plex",
-    "clean-docs": "docusaurus clean-api-docs Plex",
+    "gen-docs": "docusaurus gen-api-docs all",
+    "clean-docs": "docusaurus clean-api-docs all",
     "rebuild": "yarn clean-docs && yarn gen-docs"
   },
   "dependencies": {

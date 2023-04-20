@@ -1,0 +1,39 @@
+---
+id: get-source-connection-information
+sidebar_label: Get Source Connection Information
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["Security"],"description":"If a caller requires connection details and a transient token for a source that is known to the server, for example a cloud media provider or shared PMS, then this endpoint can be called. This endpoint is only accessible with either an admin token or a valid transient token generated from an admin token.\nNote: requires Plex Media Server >= 1.15.4.\n","operationId":"getSourceConnectionInformation","parameters":[{"name":"source","description":"The source identifier with an included prefix.","in":"query","schema":{"type":"string","example":["server://client-identifier","provider://provider-identifier"]},"required":true}],"responses":{"200":{"description":"Source Connection Information"},"401":{"description":"Unauthorized - Returned if the X-Plex-Token is missing from the header or query.","content":{"application/json":{"schema":{"type":"object","properties":{"errors":{"type":"array","items":{"type":"object","properties":{"code":{"type":"number","example":1001},"message":{"type":"string","example":"User could not be authenticated"},"status":{"type":"number","example":401}}}}}}}}}},"method":"get","path":"/security/resources","servers":[{"url":"http://{Local IP}:{Port}","variables":{"Local IP":{"default":"10.10.10.47","description":"The Local IP Address of your plex server"},"Port":{"default":"32400","description":"The port to access your plex server"}}},{"url":"https://{Local IP}:{Port}","variables":{"Local IP":{"default":"10.10.10.47","description":"The Local IP Address of your plex server"},"Port":{"default":"32400","description":"The port to access your plex server"}}}],"security":[{"Token":[],"ClientIdentifier":[],"Device":[],"DeviceName":[],"Platform":[],"PlatformVersion":[],"Product":[],"Version":[]}],"securitySchemes":{"Token":{"description":"Plex Authentication Token","type":"apiKey","in":"header","name":"X-Plex-Token"},"ClientIdentifier":{"description":"Plex Authentication Token","type":"apiKey","in":"header","name":"X-Plex-Client-Identifier"},"DeviceName":{"description":"Primary name for the device eg. `Plex Web (Chrome)`","type":"apiKey","in":"header","name":"X-Plex-Device-Name"},"Device":{"description":"The type of device your application is running on\nDevice name and or model number, eg `iPhone3,2`, `Motorola XOOM™`, `LG5200TV`\n","type":"apiKey","in":"header","name":"X-Plex-Device"},"PlatformVersion":{"description":"Operating system version\neg `4.3.1`, `10.6.7`, `3.2`\n","type":"apiKey","in":"header","name":"X-Plex-Platform-Version"},"Platform":{"description":"Platform name \neg: `Web`, `iOS`, `MacOSX`, `Android`, `LG`\n","type":"apiKey","in":"header","name":"X-Plex-Platform"},"Product":{"description":"Plex application name \neg: `Laika`, `Plex Media Server`, `Media Link`\n","type":"apiKey","in":"header","name":"X-Plex-Product"},"Version":{"description":"Plex application version number","type":"apiKey","in":"header","name":"X-Plex-Version"}},"info":{"title":"Plex-API","summary":"A Plex Media Server API Map","description":"An Open API Spec for interacting with Plex.tv and Plex Servers","version":"0.0.3","contact":{"name":"Luke Hagar","url":"https://www.LukeHagar.com","email":"Lukeslakemail@gmail.com"},"license":{"name":"MIT","identifier":"MIT","url":"https://opensource.org/licenses/MIT"}},"postman":{"name":"Get Source Connection Information","description":{"content":"If a caller requires connection details and a transient token for a source that is known to the server, for example a cloud media provider or shared PMS, then this endpoint can be called. This endpoint is only accessible with either an admin token or a valid transient token generated from an admin token.\nNote: requires Plex Media Server >= 1.15.4.\n","type":"text/plain"},"url":{"path":["security","resources"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) The source identifier with an included prefix.","type":"text/plain"},"key":"source","value":""}],"variable":[]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/plex-media-server/plex-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiDemoPanel/MethodEndpoint";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+
+<h1 className={"openapi__heading"}>Get Source Connection Information</h1>
+
+<MethodEndpoint method={"get"} path={"/security/resources"}></MethodEndpoint>
+
+
+
+If a caller requires connection details and a transient token for a source that is known to the server, for example a cloud media provider or shared PMS, then this endpoint can be called. This endpoint is only accessible with either an admin token or a valid transient token generated from an admin token.
+Note: requires Plex Media Server >= 1.15.4.
+
+
+<details style={{"marginBottom":"1rem"}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"source","description":"The source identifier with an included prefix.","in":"query","schema":{"type":"string","example":["server://client-identifier","provider://provider-identifier"]},"required":true}}></ParamsItem></ul></div></details><div><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+Source Connection Information
+
+</div><div></div></TabItem><TabItem label={"401"} value={"401"}><div>
+
+Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
+
+</div><div><MimeTabs className={"openapi-tabs__mime"} schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}} className={"openapi-markdown__details"}><summary style={{}}><strong>errors</strong><span style={{"opacity":"0.6"}}> object[]</span></summary><div style={{"marginLeft":"1rem"}}><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}>Array [</div></li><SchemaItem collapsible={false} name={"code"} required={false} schemaName={"number"} qualifierMessage={undefined} schema={{"type":"number","example":1001}}></SchemaItem><SchemaItem collapsible={false} name={"message"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","example":"User could not be authenticated"}}></SchemaItem><SchemaItem collapsible={false} name={"status"} required={false} schemaName={"number"} qualifierMessage={undefined} schema={{"type":"number","example":401}}></SchemaItem><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}>]</div></li></div></details></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"errors\": [\n    {\n      \"code\": 1001,\n      \"message\": \"User could not be authenticated\",\n      \"status\": 401\n    }\n  ]\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div></div>
