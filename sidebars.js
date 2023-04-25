@@ -4,13 +4,13 @@ const sidebars = {
     {
       type: "category",
       label: "Plex Media Server API",
-      collapsible: false,
-      collapsed: false,
+      collapsible: true,
+      collapsed: true,
       link: {
         type: "generated-index",
         title: "Plex Media Server API",
         description:
-          "This documentation is generated from an OpenAPI Specificiation File",
+          "This documentation is generated from an OpenAPI Specification File",
         slug: "/plex",
       },
       items: require("./docs/plex/sidebar.js"),
@@ -18,13 +18,13 @@ const sidebars = {
     {
       type: "category",
       label: "Plex TV API",
-      collapsible: false,
-      collapsed: false,
+      collapsible: true,
+      collapsed: true,
       link: {
         type: "generated-index",
         title: "Plex TV API",
         description:
-          "This documentation is generated from an OpenAPI Specificiation File",
+          "This documentation is generated from an OpenAPI Specification File",
         slug: "/plex-tv",
       },
       items: require("./docs/plex-tv/sidebar.js"),
@@ -36,7 +36,7 @@ const sidebars = {
       collapsed: true,
       link: {
         type: "generated-index",
-        title: "Legacy API Markdown",
+        title: "Legacy Documentation",
         description:
           "This documentation is the source markdown data used to create the open API Document",
         slug: "/legacy",
