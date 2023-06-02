@@ -109,6 +109,8 @@ paths:
                     token:
                       type: string
                       example: VFnxitsRFdWx_WrzsKL
+        '400':
+          description: 'Bad Request - A parameter was not specified, or was specified incorrectly.'
         '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
           content:
@@ -161,6 +163,8 @@ paths:
                     type: boolean
                   subscription:
                     type: boolean
+        '400':
+          description: 'Bad Request - A parameter was not specified, or was specified incorrectly.'
         '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
           content:
@@ -213,6 +217,8 @@ paths:
                     type: boolean
                   subscription:
                     type: boolean
+        '400':
+          description: 'Bad Request - A parameter was not specified, or was specified incorrectly.'
         '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
           content:
@@ -520,6 +526,8 @@ paths:
                             type: boolean
                           IPv6:
                             type: boolean
+        '400':
+          description: 'Bad Request - A parameter was not specified, or was specified incorrectly.'
         '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
           content:
@@ -551,6 +559,8 @@ paths:
       responses:
         '200':
           description: Logged in user details
+        '400':
+          description: 'Bad Request - A parameter was not specified, or was specified incorrectly.'
         '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
           content:
@@ -602,6 +612,8 @@ paths:
                     updatedAt:
                       type: number
                       example: 1681769995
+        '400':
+          description: 'Bad Request - A parameter was not specified, or was specified incorrectly.'
         '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
           content:
@@ -656,6 +668,8 @@ paths:
                   scrobbling:
                     type: string
                     example: opt_in
+        '400':
+          description: 'Bad Request - A parameter was not specified, or was specified incorrectly.'
         '401':
           description: Unauthorized - Returned if the X-Plex-Token is missing from the header or query.
           content:
