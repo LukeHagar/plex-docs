@@ -79,6 +79,7 @@ const config = {
         },
         items: [
           { to: "/docs/plex", label: "API", className: "indent" },
+          { to: "/sdk-docs", label: "SDKs", className: "indent" },
           { to: "/blog", label: "Blog", className: "indent" },
         ],
       },
