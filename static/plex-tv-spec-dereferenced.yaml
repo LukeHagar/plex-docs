@@ -410,7 +410,7 @@ paths:
           description: Include Https entries in the results
           in: query
           schema:
-            type: number
+            type: integer
             enum:
               - 0
               - 1
@@ -418,7 +418,7 @@ paths:
           description: Include Relay addresses in the results
           in: query
           schema:
-            type: number
+            type: integer
             enum:
               - 0
               - 1
@@ -426,7 +426,7 @@ paths:
           description: Include IPv6 entries in the results
           in: query
           schema:
-            type: number
+            type: integer
             enum:
               - 0
               - 1
