@@ -196,7 +196,6 @@ const config = {
         {
           tagName: "script",
           attributes: {
-            defer: true,
             "data-domain": "plexapi.dev",
             src: "https://analytics.plygrnd.org/js/script.js",
           },
