@@ -193,7 +193,6 @@ const config = {
         },
       ],
       headTags: [
-        // Declare a <link> preconnect tag
         {
           tagName: "script",
           attributes: {
