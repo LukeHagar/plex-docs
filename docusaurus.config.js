@@ -192,6 +192,17 @@ const config = {
             "plex, api, sdk, ts, typescript, plex media server, plexapi.dev",
         },
       ],
+      headTags: [
+        // Declare a <link> preconnect tag
+        {
+          tagName: "script",
+          attributes: {
+            defer: true,
+            "data-domain": "plexapi.dev",
+            src: "https://analytics.plygrnd.org/js/script.js",
+          },
+        },
+      ],
       algolia: {
         // The application ID provided by Algolia
         appId: "B040KPNF7Z",
