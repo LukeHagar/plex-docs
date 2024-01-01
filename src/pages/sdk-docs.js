@@ -14,7 +14,7 @@ export default function SdkDocs() {
       <iframe
         className={styles.sdkDocs}
         id="sdk-docs"
-        src="https://docs.liblab.com/lukeslakemail/plex-api/0.0.3"
+        src="https://plex-sdk-docs.vercel.app/typescript/client_sdks"
       />
     </Layout>
   );
