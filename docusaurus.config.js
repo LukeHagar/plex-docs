@@ -235,7 +235,7 @@ const config = {
             outputDir: "docs/plex-tv", // Output directory for generated .mdx docs
             template: "api.mustache",
             downloadUrl:
-              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml",
+              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-tv-spec-dereferenced.yaml",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
@@ -247,7 +247,7 @@ const config = {
             outputDir: "docs/plex", // Output directory for generated .mdx docs
             template: "api.mustache",
             downloadUrl:
-              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-api-spec-dereferenced.yaml",
+              "https://raw.githubusercontent.com/LukeHagar/plex-api-spec/main/plex-media-server-spec-dereferenced.yaml",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
