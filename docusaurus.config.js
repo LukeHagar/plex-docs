@@ -9,7 +9,14 @@ const config = {
   title: "Plex Docs",
   tagline: "Community Sourced Plex API Documentation with a kick",
   favicon: "img/favicon.ico",
-
+  scripts: [
+    {
+      src: "https://analytics.plygrnd.org/js/script.js",
+      async: true,
+      defer: true,
+      "data-domain": "plexapi.dev",
+    },
+  ],
   // Set the production url of your site here
   url: "https://plexapi.dev",
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -190,23 +197,6 @@ const config = {
           name: "keywords",
           content:
             "plex, api, sdk, ts, typescript, plex media server, plexapi.dev",
-        },
-      ],
-      headTags: [
-        {
-          tagName: "script",
-          attributes: {
-            defer: true,
-            "data-domain": "plexapi.dev",
-            src: "https://analytics.plygrnd.org/js/script.js",
-          },
-        },
-        {
-          tagName: "link",
-          attributes: {
-            rel: "preconnect",
-            href: "https://example.com",
-          },
         },
       ],
       algolia: {
