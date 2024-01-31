@@ -32,7 +32,10 @@ components:
     ClientIdentifier:
       description: Plex Authentication Token
       type: apiKey
-      in: header
+      in:
+        - header
+        - query
+        - cookie
       name: X-Plex-Client-Identifier
     DeviceName:
       description: Primary name for the device eg. `Plex Web (Chrome)`
