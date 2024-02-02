@@ -6,8 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Plex Docs",
-  tagline: "Community Sourced Plex API Documentation with a kick",
+  title: "Open Source API Documentation and SDKs for Plex",
+  tagline:
+    "Open and community sourced API documentation and SDKs for Plex with a kick!",
   favicon: "img/favicon.ico",
   scripts: [
     {
@@ -79,7 +80,7 @@ const config = {
       // Replace with your project's social card
       image: "img/Open-Graph-Image.png",
       navbar: {
-        title: "Plex Docs",
+        title: "Open Source API Documentation and SDKs for Plex",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
@@ -103,19 +104,6 @@ const config = {
             ],
           },
           {
-            title: "Community",
-            items: [
-              {
-                label: "Plex",
-                href: "https://plex.tv",
-              },
-              {
-                label: "Plex Forums",
-                href: "https://forums.plex.tv",
-              },
-            ],
-          },
-          {
             title: "More",
             items: [
               {
@@ -129,7 +117,6 @@ const config = {
             ],
           },
         ],
-        copyright: `${new Date().getFullYear()} Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -190,13 +177,13 @@ const config = {
       announcementBar: {
         id: "announcementBar_1",
         content:
-          "This is not an Official Plex.TV Resource. If you have any feedback on the <a href='https://github.com/LukeHagar/plex-api-spec'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
+          "This is not an Official Plex.TV Resource and is built or maintained by Plex. If you have any feedback on the <a href='https://github.com/LukeHagar/plex-docs'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
       },
       metadata: [
         {
           name: "keywords",
           content:
-            "plex, api, sdk, ts, typescript, plex media server, plexapi.dev",
+            "api documentation for plex, sdks for plex, sdk, ts, typescript, plexapi.dev",
         },
       ],
       algolia: {
