@@ -8,7 +8,7 @@ export default function SdkDocs() {
   return (
     <Layout
       title={`SDK Docs`}
-      description="Community Made Plex Media Server SDK Documentation"
+      description="Community Made SDK Documentation for Plex"
       noFooter
     >
       <iframe

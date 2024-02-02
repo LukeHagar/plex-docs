@@ -4,8 +4,8 @@ const sidebars = {
     {
       type: "category",
       label: "Plex Media Server API",
-      collapsible: false,
-      collapsed: false,
+      collapsible: true,
+      collapsed: true,
       link: {
         type: "generated-index",
         title: "Plex Media Server API",
@@ -18,8 +18,8 @@ const sidebars = {
     {
       type: "category",
       label: "Plex TV API",
-      collapsible: false,
-      collapsed: false,
+      collapsible: true,
+      collapsed: true,
       link: {
         type: "generated-index",
         title: "Plex TV API",

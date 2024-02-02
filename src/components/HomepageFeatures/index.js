@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        API Documentation dynamically generated from an{" "}
+        API Documentation and SDK for Plex dynamically generated from an{" "}
         <a
           href="https://github.com/LukeHagar/plex-api-spec"
           target="_blank"
@@ -25,7 +25,8 @@ const FeatureList = [
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        The OpenAPI Specification is fully open source, and everyone is welcome{" "}
+        The OpenAPI Specification is fully open source, and everyone is welcome
+        to{" "}
         <a
           href="https://github.com/LukeHagar/plex-api-spec/issues"
           target="_blank"
@@ -46,18 +47,15 @@ const FeatureList = [
     ),
   },
   {
-    title: "Potential for SDKs",
+    title: "SDKs",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        The Open API Specification can be used to generate SDKs in a number of
-        different languages (JS/TS, GO, Python, Powershell) using existing{" "}
-        <a
-          href="https://openapi-generator.tech"
-          target="_blank"
-          rel="noreferrer"
-        >
-          time tested tools
+        The Open API Specification is used to automatically generate SDKs in a
+        number of different languages (JavaScript/TypeScript, GO, Python,
+        etc...) using{" "}
+        <a href="https://www.speakeasyapi.dev" target="_blank" rel="noreferrer">
+          the world class OpenAPI Generation platform Speakeasy
         </a>
         .
       </>

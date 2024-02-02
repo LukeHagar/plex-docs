@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Open Source API Documentation and SDKs for Plex",
+  title: "API Documentation and SDKs for Plex",
   tagline:
     "Open and community sourced API documentation and SDKs for Plex with a kick!",
   favicon: "img/favicon.ico",
@@ -80,13 +80,14 @@ const config = {
       // Replace with your project's social card
       image: "img/Open-Graph-Image.png",
       navbar: {
-        title: "Open Source API Documentation and SDKs for Plex",
+        title: "API Documentation and SDKs for Plex",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/favicon.ico",
         },
         items: [
           { to: "/docs/plex", label: "API", className: "indent" },
+          { to: "/docs/legacy", label: "Legacy", className: "indent" },
           { to: "/sdk-docs", label: "SDKs", className: "indent" },
           { to: "/blog", label: "Blog", className: "indent" },
         ],
@@ -98,8 +99,12 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "OpenAPI Docs",
-                to: "/",
+                label: "API Documentation",
+                to: "/docs/plex",
+              },
+              {
+                label: "SDK Documentation",
+                to: "/sdk-docs",
               },
             ],
           },
@@ -109,10 +114,6 @@ const config = {
               {
                 label: "Blog",
                 to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
               },
             ],
           },
@@ -176,8 +177,10 @@ const config = {
       ],
       announcementBar: {
         id: "announcementBar_1",
+        backgroundColor: "red",
+        textColor: "white",
         content:
-          "This is not an Official Plex.TV Resource and is built or maintained by Plex. If you have any feedback on the <a href='https://github.com/LukeHagar/plex-docs'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
+          "This is not an Official Plex.TV Resource and is not built or maintained by Plex. If you have any feedback on the <a href='https://github.com/LukeHagar/plex-docs'>Website</a> or the <a href='https://github.com/LukeHagar/plex-api-spec'>API Specification</a> please let me know!",
       },
       metadata: [
         {

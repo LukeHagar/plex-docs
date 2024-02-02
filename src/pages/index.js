@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <Layout
       title={`Home`}
-      description="Community Made Plex Media Server API Documentation"
+      description="Community Made API Documentation for Plex"
     >
       <HomepageHeader />
       <main>
