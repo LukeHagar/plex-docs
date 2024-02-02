@@ -61,10 +61,6 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-        gtag: {
-          trackingID: "G-MSKDJLGPWF",
-          anonymizeIP: true,
-        },
       }),
     ],
   ],
@@ -74,7 +70,7 @@ const config = {
     ({
       colorMode: {
         defaultMode: "dark",
-        disableSwitch: true,
+        disableSwitch: false,
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
