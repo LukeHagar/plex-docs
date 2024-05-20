@@ -12,7 +12,7 @@ const config = {
   favicon: "img/favicon.ico",
   scripts: [
     {
-      src: "https://analytics.plygrnd.org/js/script.js",
+      src: "https://events.plygrnd.org/js/script.js",
       async: true,
       defer: true,
       "data-domain": "plexapi.dev",
