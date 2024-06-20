@@ -11,11 +11,7 @@ export default function SdkDocs() {
       description="Community Made SDK Documentation for Plex"
       noFooter
     >
-      <iframe
-        className={styles.sdkDocs}
-        id="sdk-docs"
-        src="https://plex-sdk-docs.vercel.app/typescript/client_sdks"
-      />
+      <p>Currently under maintenance, working on something very exciting.</p>
     </Layout>
   );
 }
